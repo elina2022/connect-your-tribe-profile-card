@@ -12,9 +12,13 @@ app.set('views', './views')
 app.use(express.static('public'))
 
 // Maak een route voor de index
-app.get('/', function (req, res) {
+app.get('/index', function (req, res) {
   // res.send('Hello World!')
   res.render('index')
+})
+app.get('/pink', function (req, res) {
+  // res.send('Hello World!')
+  res.render('pink')
 })
 
 // Stel het poortnummer in waar express op gaat luisteren

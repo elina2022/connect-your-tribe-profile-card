@@ -1,0 +1,228 @@
+:root {
+    --dark1: rgb(255, 61, 135);
+    --dark: rgb(231, 3, 91);
+    --dark3: rgb(196, 0, 75);
+    --light: rgb(255, 197, 219);
+    --border: rgb(196, 0, 75);
+    --icons: white;
+    --bg1: rgb(255, 134, 181);
+    --bg2: rgb(255, 210, 227);
+    --chargerborder: rgb(179, 179, 179);
+    --charger1: white;
+    --charger2: rgb(231, 231, 231);
+    --chargermetalborder: rgb(179, 179, 179);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dark1: rgb(148, 0, 74);
+        --dark: rgb(87, 0, 43);
+        --dark3: rgb(37, 0, 19);
+        --light: rgb(225, 101, 149);
+        --border: rgb(187, 0, 93);
+        --icons: rgb(255, 255, 255);
+        --bg1: rgb(17, 0, 7);
+        --bg2: rgb(148, 0, 74);
+        --chargerborder: rgb(0, 0, 0);
+        --charger1: rgb(7, 7, 7);
+        --charger2: rgb(15, 15, 15);
+        --chargermetalborder: rgb(125, 125, 125);
+    }
+}
+
+::selection{
+    color: var(--light);
+    background: var(--dark);
+}
+
+body {
+    background-image: linear-gradient(var(--bg1), var(--bg2));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 400px;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 20px;
+    border-top-width: 90px;
+    border-bottom-width: 90px;
+    border-radius: 50px;
+    background: linear-gradient(black, black), linear-gradient(var(--dark1), var(--dark), var(--dark3));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+}
+
+.shapes {
+    background-color: rgba(255, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 900px;
+    width: 440px;
+    top: -12.5%;
+    right: 5%;
+    flex-direction: column;
+}
+
+#circle {
+    width: 10px;
+    aspect-ratio: 1/1;
+    background-color: var(--light);
+    border-radius: 50px;
+    top: 2%;
+    border-style: inset;
+    border-color: var(--border);
+    border-width: 3px;
+    position: relative;
+    top: 0.9%;
+}
+
+#oval {
+    width: 100px;
+    height: 5px;
+    background-color: var(--light);
+    border-radius: 50px;
+    border-style: inset;
+    border-color: var(--border);
+    border-width: 5px;
+    position: relative;
+    top: 2.2%;
+}
+
+#battery {
+    color: var(--icons);
+    font-size: 320px;
+    position: relative;
+    transform: rotateY(180deg);
+    z-index: 1;
+    top: 25%;
+}
+
+#red {
+    position: relative;
+    background-color: var(--dark);
+    height: 100px;
+    width: 15px;
+    top: 1.5%;
+    right: 23%;
+    border-top-left-radius: 30px;
+}
+
+#bolt {
+    color: var(--icons);
+    font-size: 35px;
+    position: relative;
+    top: 25.5%;
+}
+
+#emptysquare {
+    position: relative;
+    border-color: var(--icons);
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 3px;
+    height: 40px;
+    width: 18px;
+    top: 27.5%;
+}
+
+#square {
+    position: relative;
+    background-color: var(--icons);
+    height: 40px;
+    width: 25px;
+    border-radius: 7%;
+    top: 25%;
+}
+
+#line {
+    position: relative;
+    background-color: var(--icons);
+    height: 25px;
+    width: 6px;
+    top: 24%;
+}
+
+#button7 {
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-color: var(--light);
+    border-radius: 50px;
+    border-style: inset;
+    border-color: var(--border);
+    border-width: 5px;
+    position: relative;
+    top: 25.3%;
+}
+
+.charger {
+    background-color: rgba(165, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 3200px;
+    width: 440px;
+    right: 5%;
+    top: -10%;
+    flex-direction: column;
+}
+
+#ac1{
+    position: relative;
+    background-color: rgb(153, 153, 153);
+    height: 50px;
+    width: 28px;
+    border-radius: 4px;
+    border-width: 3px;
+    border-style: outset;
+    border-color: var(--chargermetalborder);
+    top: 0.5%;
+    left: 3.6%;
+    z-index: -1;
+}
+
+#ac2 {
+    position: relative;
+    background-color: var(--charger1);
+    height: 50px;
+    width: 35px;
+    border-radius: 4px;
+    border-style: outset;
+    border-color: var(--chargerborder);
+    z-index: -1;
+    top: -0.3%;
+    right: 6%;
+}
+
+#ac3 {
+    position: relative;
+    background-color: var(--charger2);
+    height: 50px;
+    width: 15px;
+    border-radius: 5px;
+    border-style: outset;
+    border-color: var(--chargerborder);
+    z-index: -2;
+    top: -0.6%;
+    left: 18%;
+}
+
+#ac4 {
+    position: relative;
+    background-color: var(--charger2);
+    height: 3000px;
+    width: 5px;
+    border-radius: 2px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-style: outset;
+    border-color: var(--chargerborder);
+    z-index: -3;
+    top: -1%;
+    left: 29%;
+}
